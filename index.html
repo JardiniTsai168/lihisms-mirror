@@ -61,14 +61,14 @@ button{font-family:inherit}
 .hero-title{font-size:40px;line-height:1.12;font-weight:900;color:var(--ink);letter-spacing:-.03em;max-width:none;white-space:nowrap}
 .hero-title .highlight{color:var(--pink);text-decoration:underline;text-decoration-color:#f5d022;text-decoration-thickness:6px;text-underline-offset:6px}
 .hero-subtitle{font-size:22px;line-height:1.6;color:#39406f;font-weight:500;margin-top:18px;max-width:650px}
-.hero-badges{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:760px;position:relative;z-index:3;margin-top:10px}
-.hex-card{position:relative;min-height:132px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--ink);filter:drop-shadow(0 0 12px rgba(255,255,255,.65))}
+.hero-badges{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:660px;position:relative;z-index:3;margin-top:10px}
+.hex-card{position:relative;min-height:190px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--ink);filter:drop-shadow(0 0 12px rgba(255,255,255,.65))}
 .hex-card::before{content:'';position:absolute;inset:0;background:#fff;clip-path:polygon(50% 0,95% 25%,95% 75%,50% 100%,5% 75%,5% 25%);border:5px solid transparent}
 .hex-card::after{content:'';position:absolute;inset:9px;border:4px solid #4e58b4;clip-path:polygon(50% 0,95% 25%,95% 75%,50% 100%,5% 75%,5% 25%);pointer-events:none}
 .hex-card>div{position:relative;z-index:1;max-width:74%;transform:translateY(-1px)}
 .hex-card strong,.hex-card span{position:relative;z-index:1;display:block}
-.hex-card span{font-size:18px;line-height:1.26;font-weight:700}
-.hex-card strong{font-size:22px;line-height:1.12;font-weight:900;margin:2px 0}
+.hex-card span{font-size:21px;line-height:1.22;font-weight:500}
+.hex-card strong{font-size:31px;line-height:1.05;font-weight:900;margin:3px 0}
 .hero-promise{position:absolute;z-index:3;top:560px;left:50%;transform:translateX(-50%);width:min(720px,78%);min-height:76px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:31px;font-weight:900;line-height:1.18;color:#21439b;background:#fff;padding:12px 18px 16px;clip-path:polygon(0 0,100% 0,92% 100%,8% 100%)}
 .hero-promise::after{content:'';position:absolute;left:27%;right:27%;bottom:13px;height:4px;background:#f5d022;border-radius:999px}
 .phone{position:relative;z-index:2;width:270px;height:520px;margin:0 0 0 auto;border:10px solid #2f3038;border-radius:48px;background:linear-gradient(140deg,#8ce2d9,#397f82);box-shadow:var(--shadow);padding:52px 22px 28px;color:#fff}
@@ -197,11 +197,11 @@ button{font-family:inherit}
   .hero-copy{margin-bottom:20px;max-width:100%}
   .hero-title{font-size:36px;white-space:normal}
   .hero-subtitle{font-size:18px;line-height:1.55;max-width:100%}
-  .hero-badges{grid-template-columns:repeat(2,1fr);gap:8px}
+  .hero-badges{gap:8px}
   .hex-card{min-height:112px}
   .hex-card::after{inset:6px;border-width:3px}
-  .hex-card span{font-size:15px}
-  .hex-card strong{font-size:20px}
+  .hex-card span{font-size:16px}
+  .hex-card strong{font-size:22px}
   .phone{width:210px;height:400px;margin:8px auto 0;border-radius:38px;padding:42px 16px 20px;order:3}
   .phone-time{font-size:42px;margin:20px 0 18px}
   .sms-card h3{font-size:18px}
@@ -367,11 +367,10 @@ button{font-family:inherit}
 <h1 class="hero-title">lihiSMS，為<span class="highlight">效益</span>而生的行銷簡訊系統</h1>
 <p class="hero-subtitle">不只是發簡訊，而是把白名單、短網址、追蹤數據與發送流程整合成一套真正能用的行銷工具。</p>
 </div>
-<div aria-label="lihiSMS 四大能力" class="hero-badges">
-<div class="hex-card"><div><strong>品牌級</strong><span>簡訊方案</span></div></div>
-<div class="hex-card"><div><strong>數據</strong><span>可追蹤</span></div></div>
-<div class="hex-card"><div><strong>流程</strong><span>更安全</span></div></div>
-<div class="hex-card"><div><strong>適合</strong><span>商業發送</span></div></div>
+<div aria-label="lihiSMS 三大能力" class="hero-badges">
+<div class="hex-card"><div><span>內建</span><strong>防呆系統</strong><span>檢測發送<br/>關鍵字跟網域</span></div></div>
+<div class="hex-card"><div><span>NCC 簡訊</span><strong>白名單</strong><span>協助提交送審</span></div></div>
+<div class="hex-card"><div><span>超強</span><strong>行銷系統</strong><span>優化行銷</span></div></div>
 </div>
 <div class="hero-promise">整合白名單、短網址與發送流程，讓每一封簡訊都更有商業價值</div>
 </div>
