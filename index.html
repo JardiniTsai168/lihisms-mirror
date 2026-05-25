@@ -146,6 +146,37 @@ button{font-family:inherit}
 .footer-note strong{display:block;font-size:22px;margin-bottom:8px}
 .footer-logo{width:150px;margin:24px auto 0}
 .mobile-cta{display:none;position:fixed;left:0;right:0;bottom:0;z-index:50;background:#fff;padding:12px 18px;box-shadow:0 -8px 24px rgba(18,20,95,.14)}
+
+.nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid rgba(18,20,95,.08)}
+.nav-inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 24px}
+.nav-logo img{height:40px;width:auto;display:block}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none;margin:0;padding:0;color:var(--ink);font-size:16px;font-weight:700}
+.nav-links a{color:var(--ink)}
+.has-dropdown{position:relative}
+.nav-dropdown{display:none;position:absolute;top:100%;left:0;min-width:210px;background:#fff;border:1px solid rgba(18,20,95,.1);border-radius:12px;box-shadow:0 18px 38px rgba(18,20,95,.12);padding:10px 0;list-style:none}
+.nav-dropdown li a{display:block;padding:10px 16px;white-space:nowrap}
+.has-dropdown:hover .nav-dropdown{display:block}
+.nav-cta.desktop{display:flex;align-items:center;gap:12px}
+.btn-secondary,.btn-primary{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;font-weight:800;transition:.2s ease}
+.btn-secondary{border:1px solid rgba(18,20,95,.18);color:var(--ink);background:#fff;padding:8px 20px;font-size:14px}
+.btn-primary{background:var(--pink);color:#fff;padding:10px 24px;font-size:15px;box-shadow:0 8px 20px rgba(236,28,148,.22)}
+.nav-hamburger{display:none;flex-direction:column;gap:4px;background:none;border:0;padding:4px;cursor:pointer}
+.nav-hamburger span{display:block;width:24px;height:2px;background:var(--ink);border-radius:999px}
+.nav-mobile-menu,.nav-mobile-overlay{display:none}
+@media(max-width:900px){
+  .nav-inner{padding:12px 18px}
+  .nav-links,.nav-cta.desktop{display:none}
+  .nav-hamburger{display:flex}
+  .nav-mobile-menu{position:fixed;top:0;right:-100%;width:min(88vw,360px);height:100vh;background:#fff;z-index:120;padding:84px 22px 26px;display:flex;flex-direction:column;gap:14px;box-shadow:-18px 0 40px rgba(18,20,95,.16);transition:right .25s ease}
+  .nav-mobile-menu.open{right:0}
+  .nav-mobile-menu a{font-size:17px;font-weight:800;color:var(--ink)}
+  .mobile-submenu{display:grid;gap:12px;padding:4px 0 0 14px}
+  .mobile-cta-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}
+  .mobile-cta-row .btn-secondary,.mobile-cta-row .btn-primary{width:100%;padding:12px 16px}
+  .nav-mobile-overlay{position:fixed;inset:0;background:rgba(18,20,95,.32);z-index:110}
+  .nav-mobile-overlay.open{display:block}
+}
+
 .mobile-cta a{display:flex;justify-content:center;align-items:center;background:var(--pink);color:#fff;border-radius:10px;padding:13px;font-size:17px;font-weight:900}
 @media(max-width:900px){
   .page{max-width:100%;box-shadow:none}
@@ -255,6 +286,50 @@ button{font-family:inherit}
 </script>
 </head>
 <body>
+
+<nav class="nav" id="nav">
+<div class="nav-inner">
+<a class="nav-logo" href="https://lihi.io/"><img alt="lihi" src="assets/images/lihi-logo-primary.png"/></a>
+<ul class="nav-links">
+<li><a href="https://domain.lihi.io/">品牌網域</a></li>
+<li><a href="https://app.lihi.io/admin/">行銷工具</a></li>
+<li><a href="https://knowledge.lihi.io/pricing/">方案價格</a></li>
+<li class="has-dropdown">
+<a href="javascript:void(0)">行銷資源 ▾</a>
+<ul class="nav-dropdown">
+<li><a href="https://knowledge.lihi.io/">知識庫</a></li>
+<li><a href="https://knowledge.lihi.io/recommended-course-ch/">官方課程推薦</a></li>
+<li><a href="https://verify.lihi.io/">LIHI 證照驗證</a></li>
+</ul>
+</li>
+<li><a href="https://knowledge.lihi.io/about-us-ch/">關於我們</a></li>
+</ul>
+<div class="nav-cta desktop">
+<a class="btn-secondary" href="https://app.lihi.io/admin/login">登入</a>
+<a class="btn-primary" href="https://lihi.io/go/register">免費註冊</a>
+</div>
+<button aria-label="選單" class="nav-hamburger" id="hamburger">
+<span></span><span></span><span></span>
+</button>
+</div>
+<div class="nav-mobile-menu" id="mobileMenu">
+<a href="https://domain.lihi.io/">品牌網域</a>
+<a href="https://app.lihi.io/admin/">行銷工具</a>
+<a href="https://knowledge.lihi.io/pricing/">方案價格</a>
+<div class="mobile-submenu">
+<a href="https://knowledge.lihi.io/">知識庫</a>
+<a href="https://knowledge.lihi.io/recommended-course-ch/">官方課程推薦</a>
+<a href="https://verify.lihi.io/">LIHI 證照驗證</a>
+</div>
+<a href="https://knowledge.lihi.io/about-us-ch/">關於我們</a>
+<div class="mobile-cta-row">
+<a class="btn-secondary" href="https://app.lihi.io/admin/login">登入</a>
+<a class="btn-primary" href="https://lihi.io/go/register">免費註冊</a>
+</div>
+</div>
+<div class="nav-mobile-overlay" id="mobileOverlay"></div>
+</nav>
+
 <noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-5GKMJC8" style="display:none;visibility:hidden" width="0"></iframe></noscript>
 <!-- Icons: Lucide, ISC License, https://lucide.dev -->
 <svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
@@ -382,5 +457,21 @@ button{font-family:inherit}
 </footer>
 </main>
 <div class="mobile-cta"><a href="https://app.lihi.io/admin/register?e=sms" rel="noopener" target="_blank">開始使用 lihiSMS</a></div>
+
+<script>
+(function(){
+  const hamburger=document.getElementById('hamburger');
+  const menu=document.getElementById('mobileMenu');
+  const overlay=document.getElementById('mobileOverlay');
+  if(!hamburger||!menu||!overlay)return;
+  const toggle=()=>{
+    menu.classList.toggle('open');
+    overlay.classList.toggle('open');
+  };
+  hamburger.addEventListener('click',toggle);
+  overlay.addEventListener('click',toggle);
+})();
+</script>
+
 </body>
 </html>
