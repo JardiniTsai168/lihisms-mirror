@@ -148,15 +148,18 @@ button{font-family:inherit}
 .cta-button:hover{transform:translateY(-3px);box-shadow:13px 13px 0 var(--navy)}
 .cta-button span{font-size:54px;font-weight:900;line-height:1.1}
 .cta-sms-word{margin-top:8px;font:900 52px/1 'Inter','Noto Sans TC',sans-serif;font-style:italic;letter-spacing:-1px;color:#fff}
-.site-footer{background:#0f1238;color:#fff;padding:64px 72px 34px}
-.footer-grid{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1.35fr 1fr 1fr 1fr;gap:42px;align-items:start}
-.footer-brand img{height:60px;width:auto;margin-bottom:20px}
-.footer-brand p{color:rgba(255,255,255,.72);font-size:15px;line-height:1.8;max-width:360px}
-.footer-col h4{font-size:15px;font-weight:900;letter-spacing:.02em;margin-bottom:16px}
-.footer-links{list-style:none;display:grid;gap:12px}
-.footer-links a{color:rgba(255,255,255,.78);font-size:15px;line-height:1.6}
-.footer-links a:hover{color:#fff}
-.footer-bottom{max-width:var(--max);margin:38px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;gap:18px;align-items:center;color:rgba(255,255,255,.58);font-size:13px;line-height:1.6}
+.site-footer{background:#f4f0f1;padding:0;color:#7b7698}
+.site-footer::before{content:'';display:block;height:16px;background:#23206f}
+.footer-shell{max-width:1200px;margin:0 auto;padding:44px 24px 28px;display:flex;justify-content:space-between;align-items:flex-start;gap:32px}
+.footer-left img{height:32px;width:auto;margin-bottom:16px}
+.footer-meta{font-size:14px;line-height:1.6;color:#7b7698}
+.footer-right{display:flex;flex-direction:column;align-items:flex-end;gap:18px}
+.footer-inline-links{display:flex;align-items:center;flex-wrap:wrap;justify-content:flex-end;gap:28px;list-style:none}
+.footer-inline-links a{font-size:14px;color:#7b7698}
+.footer-inline-links a:hover{color:#23206f}
+.footer-social{display:flex;align-items:center;gap:18px}
+.footer-social a{display:inline-flex;color:#7672a0}
+.footer-social svg{width:28px;height:28px;fill:currentColor}
 .mobile-cta{display:none;position:fixed;left:0;right:0;bottom:0;z-index:50;background:#fff;padding:12px 18px;box-shadow:0 -8px 24px rgba(18,20,95,.14)}
 
 .nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid rgba(18,20,95,.08)}
@@ -288,9 +291,12 @@ button{font-family:inherit}
   .gift-list{padding-left:18px}
   .gift-item{font-size:20px;border-radius:12px}
   .gift-item .num{left:-10px}
-  .site-footer{padding:40px 24px 28px}
-  .footer-grid{grid-template-columns:1fr;gap:24px}
-  .footer-bottom{flex-direction:column;align-items:flex-start}
+  .site-footer::before{height:14px}
+  .footer-shell{padding:34px 18px 24px;flex-direction:column;gap:22px}
+  .footer-left img{height:28px}
+  .footer-right{align-items:flex-start;gap:16px}
+  .footer-inline-links{justify-content:flex-start;gap:16px 20px}
+  .footer-social svg{width:26px;height:26px}
   .cta-sms-word{font-size:36px}
   .mobile-cta{display:none}
 }
@@ -310,7 +316,7 @@ button{font-family:inherit}
 
 <nav class="nav" id="nav">
 <div class="nav-inner">
-<a class="nav-logo" href="https://lihi.io/"><img alt="lihi" src="https://media.discordapp.net/attachments/1014170595228930078/1509049443142602863/lihi_VI_15.png?ex=6a17c350&is=6a1671d0&hm=3079d34cd53f793c4ef3bad43a5d6db411edde1d21eab71331c33d79d3e110ae&=&format=webp&quality=lossless&width=836&height=270"/></a>
+<a class="nav-logo" href="https://lihi.io/"><img alt="lihiSMS" src="https://media.discordapp.net/attachments/1014170595228930078/1509049442777432155/lihisms-2.png?ex=6a17c34f&is=6a1671cf&hm=e50fd7bc3d9e65aa77ef0b4f9a22715d972b52e48bd216a1624f49662b2e3702&=&format=webp&quality=lossless&width=778&height=178"/></a>
 <ul class="nav-links">
 <li><a href="https://domain.lihi.io/">品牌網域</a></li>
 <li><a href="https://app.lihi.io/admin/">行銷工具</a></li>
@@ -473,40 +479,28 @@ button{font-family:inherit}
 </a>
 </section>
 <footer class="site-footer">
-<div class="footer-grid">
-<div class="footer-brand">
-<img alt="lihi" src="https://media.discordapp.net/attachments/1014170595228930078/1509049443142602863/lihi_VI_15.png?ex=6a17c350&is=6a1671d0&hm=3079d34cd53f793c4ef3bad43a5d6db411edde1d21eab71331c33d79d3e110ae&=&format=webp&quality=lossless&width=836&height=270"/>
-<p>品牌網域、短網址、簡訊白名單、行銷追蹤與 AI 工具整合，讓品牌主用更少時間，做出更有效益的行銷。</p>
+<div class="footer-shell">
+<div class="footer-left">
+<img alt="lihiSMS" src="https://media.discordapp.net/attachments/1014170595228930078/1509049442777432155/lihisms-2.png?ex=6a17c34f&is=6a1671cf&hm=e50fd7bc3d9e65aa77ef0b4f9a22715d972b52e48bd216a1624f49662b2e3702&=&format=webp&quality=lossless&width=778&height=178"/>
+<div class="footer-meta">
+<div>利晉短網址有限公司｜2017 年成立，服務超過 5,000+ 品牌</div>
+<div>© 2018-2026 統編 82908327</div>
 </div>
-<div class="footer-col">
-<h4>產品服務</h4>
-<ul class="footer-links">
-<li><a href="https://domain.lihi.io/">品牌網域</a></li>
-<li><a href="https://app.lihi.io/admin/">行銷工具</a></li>
-<li><a href="https://knowledge.lihi.io/pricing/">方案價格</a></li>
-<li><a href="https://lihi.io/go/register">免費註冊</a></li>
+</div>
+<div class="footer-right">
+<ul class="footer-inline-links">
+<li><a href="https://lihi.io/terms">服務條款</a></li>
+<li><a href="https://lihi.io/privacy">隱私權政策</a></li>
+<li><a href="https://knowledge.lihi.io/pricing/">服務等級</a></li>
+<li><a href="https://lihi.io/abuse">搜尋網址</a></li>
+<li><a href="mailto:service@lihi.io">service@lihi.io</a></li>
 </ul>
-</div>
-<div class="footer-col">
-<h4>行銷資源</h4>
-<ul class="footer-links">
-<li><a href="https://knowledge.lihi.io/">知識庫</a></li>
-<li><a href="https://knowledge.lihi.io/recommended-course-ch/">官方課程推薦</a></li>
-<li><a href="https://verify.lihi.io/">LIHI 證照驗證</a></li>
-</ul>
-</div>
-<div class="footer-col">
-<h4>關於我們</h4>
-<ul class="footer-links">
-<li><a href="https://knowledge.lihi.io/about-us-ch/">品牌故事</a></li>
-<li><a href="https://app.lihi.io/admin/login">會員登入</a></li>
-<li><a href="https://lihi.io/">回到 lihi.io</a></li>
-</ul>
+<div class="footer-social">
+<a aria-label="Facebook" href="https://www.facebook.com/lihi.io" rel="noopener" target="_blank"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12Z"/></svg></a>
+<a aria-label="Instagram" href="https://www.instagram.com/lihi.io/" rel="noopener" target="_blank"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5Zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5Zm6-3.25a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 18 6.25Z"/></svg></a>
+<a aria-label="YouTube" href="https://www.youtube.com/@lihi_io" rel="noopener" target="_blank"><svg viewBox="0 0 24 24"><path d="M23 12s0-3.55-.45-5.26a2.9 2.9 0 0 0-2.04-2.04C18.8 4.25 12 4.25 12 4.25s-6.8 0-8.51.45A2.9 2.9 0 0 0 1.45 6.74C1 8.45 1 12 1 12s0 3.55.45 5.26a2.9 2.9 0 0 0 2.04 2.04c1.71.45 8.51.45 8.51.45s6.8 0 8.51-.45a2.9 2.9 0 0 0 2.04-2.04C23 15.55 23 12 23 12Zm-13.75 3.76V8.24L15.5 12l-6.25 3.76Z"/></svg></a>
 </div>
 </div>
-<div class="footer-bottom">
-<span>© 2026 lihi.io All rights reserved.</span>
-<span>tw 網域 $99 僅限第一年，簡訊發送目前僅限台灣地區。</span>
 </div>
 </footer>
 </main>
