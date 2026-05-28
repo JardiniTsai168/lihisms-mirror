@@ -99,9 +99,9 @@ button{font-family:inherit}
 .sms-wordmark span{color:var(--pink)}
 .shorturl{padding-top:0;padding-bottom:20px;background:#fff}
 .shorturl .band{margin:0 -72px 18px;padding:18px 72px 16px}
-.shorturl-title{display:flex;flex-direction:column;align-items:center;gap:4px;margin:0}
-.shorturl-brand{font:900 54px/.95 'Inter','Noto Sans TC',sans-serif;font-style:italic;letter-spacing:.5px;color:#fff;text-shadow:0 4px 0 rgba(18,20,95,.2)}
-.shorturl-copy{display:inline-flex;align-items:flex-end;font-size:46px;line-height:1.12;font-weight:900;letter-spacing:1px;color:var(--pink);paint-order:stroke fill;-webkit-text-stroke:3px #fff;text-shadow:none}
+.shorturl-title{display:inline-flex;flex-direction:row;align-items:flex-end;justify-content:center;gap:10px;margin:0;flex-wrap:wrap}
+.shorturl-brand{display:block;font:900 46px/.88 'Inter','Noto Sans TC',sans-serif;font-style:italic;letter-spacing:.5px;color:#fff;text-shadow:0 4px 0 rgba(18,20,95,.2)}
+.shorturl-copy{display:block;font-size:46px;line-height:1;font-weight:900;letter-spacing:1px;color:var(--pink);paint-order:stroke fill;-webkit-text-stroke:3px #fff;text-shadow:none}
 .system-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:46px;align-items:center}
 .screenshot-stack{position:relative;min-height:560px}
 .screen-hole{position:absolute;background:#fff;border:8px solid #b84bab;border-radius:12px;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;text-align:center;color:#8a84aa;font-weight:800;letter-spacing:1px;padding:20px;overflow:hidden}
@@ -244,11 +244,13 @@ button{font-family:inherit}
   .band h2{font-size:36px}
   .band p{font-size:18px}
   .shorturl .band,.plans .band{margin-left:-24px;margin-right:-24px;padding:18px 24px 14px}
+  .shorturl .band{padding:16px 24px 14px}
+  .shorturl .band,.plans .band{margin-left:-24px;margin-right:-24px}
   .plans .band{padding:28px 24px 20px;margin-bottom:14px}
   .shorturl .band{padding:16px 24px 14px}
-  .shorturl-title{gap:4px;margin:0}
-  .shorturl-brand{font-size:40px}
-  .shorturl-copy{font-size:34px;line-height:1.18}
+  .shorturl-title{gap:8px;margin:0}
+  .shorturl-brand{font-size:34px}
+  .shorturl-copy{font-size:34px;line-height:1}
   .system-grid{grid-template-columns:1fr;gap:24px}
   .screenshot-stack{min-height:auto;display:grid;gap:14px}
   .screen-hole{position:relative!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;width:100%!important;height:190px!important;border-width:5px}
@@ -299,12 +301,12 @@ button{font-family:inherit}
   .whitelist-note > span:last-child{max-width:300px;font-size:18px;line-height:1.5}
   .steps{grid-template-columns:1fr;max-width:230px;margin-left:auto;margin-right:auto}
   .band h2{font-size:31px}
-  .shorturl .band,.plans .band{margin-left:-18px;margin-right:-18px;padding-top:14px;padding-bottom:10px}
+  .shorturl .band,.plans .band{margin-left:-18px;margin-right:-18px}
   .plans .band{padding-top:24px;padding-bottom:18px;margin-bottom:12px}
   .shorturl .band{padding-top:14px;padding-bottom:12px}
-  .shorturl-title{margin:0}
+  .shorturl-title{flex-direction:column;align-items:center;gap:0;margin:0}
   .shorturl-brand{font-size:32px}
-  .shorturl-copy{font-size:29px;max-width:310px}
+  .shorturl-copy{font-size:29px;line-height:1.08;max-width:310px}
   .system-grid{gap:18px}
   .screen-hole{height:150px!important}
   .screen-hole span{font-size:15px}
