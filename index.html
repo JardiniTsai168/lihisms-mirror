@@ -149,6 +149,20 @@ button{font-family:inherit}
 .cta-button:hover{transform:translateY(-3px);box-shadow:13px 13px 0 var(--navy)}
 .cta-button span{font-size:54px;font-weight:900;line-height:1.1}
 .cta-sms-word{margin-top:8px;font:900 52px/1 'Inter','Noto Sans TC',sans-serif;font-style:italic;letter-spacing:-1px;color:#fff}
+.faq-section{padding:0 72px 56px;background:#fff}
+.faq-shell{max-width:920px;margin:0 auto}
+.faq-header{text-align:center;margin-bottom:20px}
+.faq-header h2{font-size:34px;line-height:1.15;font-weight:900;color:var(--ink)}
+.faq-header p{margin-top:8px;font-size:18px;color:#4a5387}
+.faq-list{display:grid;gap:12px}
+.faq-item{border:1px solid rgba(18,20,95,.12);border-radius:18px;background:linear-gradient(180deg,#fff,#fff7fb);box-shadow:0 14px 28px rgba(18,20,95,.08);overflow:hidden}
+.faq-item summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:20px 24px;font-size:22px;font-weight:800;color:var(--ink)}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'+';flex:0 0 auto;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:rgba(236,28,148,.12);color:var(--pink);font:900 24px/1 'Inter',sans-serif;transition:transform .2s ease,background .2s ease,color .2s ease}
+.faq-item[open] summary::after{content:'-';transform:rotate(180deg);background:var(--pink);color:#fff}
+.faq-answer{padding:0 24px 22px;text-align:left;font-size:18px;line-height:1.7;color:#313b72}
+.faq-answer a{color:var(--pink);font-weight:800;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}
+.faq-answer a:hover{color:#c31778}
 .site-footer{background:#f4f0f1;padding:0;color:#7b7698}
 .site-footer::before{content:'';display:block;height:16px;background:#23206f}
 .footer-shell{max-width:1200px;margin:0 auto;padding:44px 24px 28px;display:flex;justify-content:space-between;align-items:flex-start;gap:32px}
@@ -255,6 +269,12 @@ button{font-family:inherit}
   .cta-button{min-width:0;width:100%;min-height:118px;box-shadow:6px 6px 0 var(--navy)}
   .cta-button span{font-size:38px}
   .cta-sms-word{font-size:40px}
+  .faq-section{padding:4px 24px 44px}
+  .faq-header h2{font-size:28px}
+  .faq-header p{font-size:16px}
+  .faq-item summary{padding:18px;font-size:19px;align-items:flex-start}
+  .faq-item summary::after{width:30px;height:30px;font-size:22px}
+  .faq-answer{padding:0 18px 18px;font-size:16px}
 }
 @media(max-width:540px){
   body{padding-bottom:0}
@@ -304,6 +324,10 @@ button{font-family:inherit}
   .footer-inline-links{justify-content:flex-start;gap:16px 20px}
   .footer-social svg{width:26px;height:26px}
   .cta-sms-word{font-size:36px}
+  .faq-section{padding:0 18px 40px}
+  .faq-header h2{font-size:24px}
+  .faq-item summary{font-size:17px;padding:16px}
+  .faq-answer{font-size:15px;padding:0 16px 16px}
   .mobile-cta{display:none}
 }
 </style>
@@ -480,6 +504,36 @@ button{font-family:inherit}
 <span>立即免費註冊</span>
 <span class="cta-sms-word">開始使用 lihiSMS</span>
 </a>
+</section>
+<section class="faq-section">
+<div class="faq-shell">
+<div class="faq-header">
+<h2>常見問題</h2>
+<p>點開就能快速看重點</p>
+</div>
+<div class="faq-list">
+<details class="faq-item">
+<summary>你們有提供 lihiSMS 的 API 服務嗎？</summary>
+<div class="faq-answer">有！</div>
+</details>
+<details class="faq-item">
+<summary>你們有提供 OTP 串接嗎？</summary>
+<div class="faq-answer">有，文件在這裡：<a href="https://knowledge.lihi.io/lihisms-otp-api-ch/" rel="noopener" target="_blank">lihiSMS OTP API 文件</a></div>
+</details>
+<details class="faq-item">
+<summary>你們有使用教學嗎？</summary>
+<div class="faq-answer">有，文件在這裡：<a href="https://knowledge.lihi.io/lihismsinfo/" rel="noopener" target="_blank">lihiSMS 使用教學</a></div>
+</details>
+<details class="faq-item">
+<summary>你們可以開發票嗎？</summary>
+<div class="faq-answer">可以！</div>
+</details>
+<details class="faq-item">
+<summary>我還有問題怎麼辦？</summary>
+<div class="faq-answer">可以聯絡我們客服：<a href="https://lihistatus.com/contact" rel="noopener" target="_blank">聯絡客服</a></div>
+</details>
+</div>
+</div>
 </section>
 <footer class="site-footer">
 <div class="footer-shell">
