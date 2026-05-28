@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 74" role="img" aria-labelledby="title desc">
+  <title id="title">lihiSMS logo</title>
+  <desc id="desc">Stylized lihiSMS wordmark with linked pink and navy loops.</desc>
+  <defs>
+    <style>
+      .pink { stroke: #ff6b9d; fill: none; }
+      .navy { stroke: #121a9d; fill: none; }
+      .wordmark { fill: #121a9d; font-family: "Arial Black", "Montserrat", sans-serif; font-size: 48px; font-style: italic; font-weight: 900; letter-spacing: -2px; }
+      .plus { fill: #ff6b9d; font-family: "Arial Black", "Montserrat", sans-serif; font-size: 18px; font-style: italic; font-weight: 900; }
+    </style>
+  </defs>
+  <g stroke-linecap="round" stroke-linejoin="round" stroke-width="10">
+    <path class="pink" d="M31 49c-8 0-15-7-15-15s7-15 15-15c6 0 10 3 14 8l14 15c4 5 8 7 14 7" />
+    <path class="navy" d="M89 49c8 0 15-7 15-15s-7-15-15-15c-6 0-10 3-14 8L61 42c-4 5-8 7-14 7" />
+  </g>
+  <text class="wordmark" x="110" y="52">lihiSMS</text>
+  <text class="plus" x="256" y="19">+</text>
+</svg>
