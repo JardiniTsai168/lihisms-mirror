@@ -223,44 +223,46 @@ button{font-family:inherit}
 @media(max-width:900px){
   .page{max-width:100%;box-shadow:none}
   .section{padding:44px 24px}
-  .hero{padding-top:0;min-height:auto}
+  .hero{padding-top:0;padding-bottom:68px;min-height:auto;overflow:visible}
   .hero-grid{grid-template-columns:1fr;gap:24px}
   .logo-lockup{display:none}
   .sms-brand-crop{display:none}
-  .hero-ribbon{top:230px;min-height:420px}
+  .hero-ribbon{top:206px;min-height:470px;clip-path:polygon(0 0,50% 8%,100% 0,100% 100%,50% 92%,0 100%)}
   .hero-panel{position:relative}
   .hero-panel{padding-top:0}
   .hero-copy{margin-bottom:12px;max-width:100%}
   .hero-title{font-size:36px;white-space:normal}
   .hero-subtitle{font-size:18px;line-height:1.55;max-width:100%}
-  .hero-badges{gap:10px;margin-top:10px}
-  .hex-card{transform:translateY(96px);min-height:124px}
+  .hero-badges{gap:12px;margin-top:18px;align-items:start}
+  .hex-card{transform:translateY(54px);min-height:146px}
   .hex-card::after{inset:6px;border-width:3px}
+  .hex-card>div{max-width:74%}
   .hex-card span{font-size:16px}
   .hex-card strong{font-size:22px}
   .phone{width:210px;height:400px;margin:8px auto 0;border-radius:38px;padding:42px 16px 20px;order:3}
   .phone-time{font-size:42px;margin:20px 0 18px}
   .sms-card h3{font-size:18px}
   .sms-card p{font-size:12px}
-  .hero-promise{position:relative;top:auto;left:auto;transform:none;width:100%;max-width:560px;font-size:28px;margin:34px auto 0;padding-bottom:6px}
-  .whitelist{padding-top:44px;padding-bottom:10px;clip-path:polygon(0 0,51% 8%,100% 0,100% 94%,51% 100%,0 94%)}
+  .hero-promise{position:relative;top:auto;left:auto;transform:none;width:100%;max-width:560px;font-size:26px;margin:62px auto 0;padding:0 14px 8px}
+  .whitelist{padding-top:68px;padding-bottom:28px;clip-path:polygon(0 0,51% 6%,100% 0,100% 97%,51% 100%,0 97%)}
   .whitelist-note > span:last-child{max-width:620px}
   .whitelist h2{font-size:36px}
   .steps{grid-template-columns:repeat(2,1fr);gap:20px 18px}
   .step{min-height:150px;box-shadow:0 0 0 5px var(--ink)}
   .step-title{font-size:20px}
-  .whitelist-note{font-size:20px;flex-direction:column;gap:4px}
+  .whitelist-note{margin-top:10px;font-size:20px;flex-direction:column;gap:4px}
   .sms-wordmark{font-size:34px}
   .band h2{font-size:36px}
   .band p{font-size:18px}
   .shorturl .band,.plans .band{margin-left:-24px;margin-right:-24px;padding:18px 24px 14px}
   .plans .band{padding:28px 24px 20px;margin-bottom:14px}
   .shorturl .band{padding:16px 24px 14px}
-  .shorturl-title{gap:6px;margin:0}
+  .shorturl-title{gap:6px;margin:0;flex-wrap:wrap;white-space:normal}
   .shorturl-brand{font-size:34px;line-height:.9}
-  .shorturl-copy{font-size:28px;line-height:.95}
+  .shorturl-copy{font-size:28px;line-height:1.12;text-align:center}
   .plans .band h2{font-size:34px;line-height:1.08}
   .plans .band p{font-size:13px;line-height:1.2}
+  .plans{padding:0 24px 28px}
   .system-grid{grid-template-columns:1fr;gap:24px}
   .screenshot-stack{min-height:auto;display:grid;gap:14px}
   .screen-hole{position:relative!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;width:100%!important;height:190px!important;border-width:5px}
@@ -297,18 +299,18 @@ button{font-family:inherit}
 @media(max-width:540px){
   body{padding-bottom:0}
   .section{padding-left:18px;padding-right:18px}
-  .hero{padding-top:0}
-  .hero-ribbon{top:210px;min-height:430px}
+  .hero{padding-top:0;padding-bottom:56px}
+  .hero-ribbon{top:198px;min-height:540px}
   .sms-brand-crop{display:none}
   .hero-copy{margin-bottom:10px;max-width:100%}
   .hero-title{font-size:30px;white-space:normal}
   .hero-subtitle{font-size:17px;max-width:100%}
-  .hero-badges{grid-template-columns:1fr;max-width:250px;margin:8px auto 0}
-  .hex-card{transform:translateY(118px);min-height:104px}
+  .hero-badges{grid-template-columns:1fr;max-width:280px;gap:14px;margin:14px auto 0}
+  .hex-card{transform:none;min-height:132px}
   .hero-panel{padding-top:0}
   .phone{display:none}
-  .hero-promise{font-size:24px;clip-path:none;border-radius:10px;padding-bottom:6px}
-  .whitelist{padding-top:40px;padding-bottom:9px}
+  .hero-promise{margin-top:22px;font-size:24px;line-height:1.2;clip-path:none;border-radius:10px;padding:0 8px 6px}
+  .whitelist{margin-top:18px;padding-top:54px;padding-bottom:24px}
   .whitelist h2{font-size:30px}
   .whitelist-note > span:last-child{max-width:300px;font-size:18px;line-height:1.5}
   .steps{grid-template-columns:1fr;max-width:230px;margin-left:auto;margin-right:auto}
@@ -316,12 +318,11 @@ button{font-family:inherit}
   .shorturl .band,.plans .band{margin-left:-18px;margin-right:-18px;padding-top:14px;padding-bottom:10px}
   .plans .band{padding-top:24px;padding-bottom:18px;margin-bottom:12px}
   .shorturl .band{padding-top:14px;padding-bottom:12px}
-  .shorturl-title{margin:0;gap:4px}
-  .shorturl-brand{font-size:23px;line-height:.9}
-  .shorturl-copy{font-size:19px;line-height:.95;max-width:none}
+  .shorturl-title{margin:0;gap:2px}
+  .shorturl-brand{display:block;font-size:30px;line-height:1}
+  .shorturl-copy{display:block;font-size:22px;line-height:1.15;max-width:none}
   .plans .band h2{font-size:29px;line-height:1.08}
-  .plans .band p{font-size:11px;line-height:1.2}
-  .plans .band p{font-size:24px;line-height:1.08}
+  .plans .band p{font-size:13px;line-height:1.35}
   .system-grid{gap:18px}
   .screen-hole{height:150px!important}
   .screen-hole span{font-size:15px}
@@ -335,11 +336,10 @@ button{font-family:inherit}
   .promo-note{font-size:15px;line-height:1.5}
   .promo-top h2{font-size:36px}
   .promo-top strong{font-size:42px;-webkit-text-stroke:0;text-shadow:3px 0 0 #fff,-3px 0 0 #fff,0 3px 0 #fff,0 -3px 0 #fff,2px 2px 0 #fff,-2px 2px 0 #fff,2px -2px 0 #fff,-2px -2px 0 #fff}
-  .promo-body{padding-top:34px}
-  .promo-body{padding-bottom:58px}
+  .promo-body{padding-top:34px;padding-bottom:42px}
   .gift-list{gap:12px}
   .gift-list{padding-left:18px}
-  .gift-item{font-size:20px;border-radius:12px}
+  .gift-item{font-size:20px;line-height:1.35;border-radius:12px}
   .gift-item .num{left:-10px}
   .site-footer::before{height:14px}
   .footer-shell{padding:34px 18px 24px;flex-direction:column;gap:22px}
