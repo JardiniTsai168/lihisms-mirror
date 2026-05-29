@@ -234,12 +234,12 @@ button{font-family:inherit}
   .hero-copy{margin-top:18px;margin-bottom:12px;max-width:100%}
   .hero-title{position:relative;top:3px;font-size:36px;white-space:normal}
   .hero-subtitle{position:relative;top:3px;font-size:18px;line-height:1.55;max-width:100%}
-  .hero-badges{gap:4px;margin-top:118px;align-items:start}
-  .hex-card{transform:translateY(54px);min-height:106px}
+  .hero-badges{gap:8px;margin-top:118px;align-items:start}
+  .hex-card{transform:translateY(54px);min-height:132px}
   .hex-card::after{inset:6px;border-width:3px}
   .hex-card>div{max-width:74%}
   .hex-card span{font-size:15px}
-  .hex-card strong{font-size:22px}
+  .hex-card strong{font-size:21px}
   .phone{width:210px;height:400px;margin:8px auto 0;border-radius:38px;padding:42px 16px 20px;order:3}
   .phone-time{font-size:42px;margin:20px 0 18px}
   .sms-card h3{font-size:18px}
@@ -306,15 +306,13 @@ button{font-family:inherit}
   .hero-copy{margin-top:20px;margin-bottom:10px;max-width:100%}
   .hero-title{position:relative;top:3px;font-size:30px;white-space:normal}
   .hero-subtitle{position:relative;top:3px;font-size:17px;max-width:100%}
-  .hero-badges{grid-template-columns:1fr;max-width:286px;margin:114px auto 0;gap:0}
-  .hex-card{transform:none;min-height:82px;filter:drop-shadow(0 8px 16px rgba(26,26,94,.12))}
-  .hex-card + .hex-card{margin-top:-10px}
-  .hex-card::before{clip-path:polygon(50% 0,96% 20%,96% 80%,50% 100%,4% 80%,4% 20%)}
-  .hex-card::after{inset:5px;border-width:2px;clip-path:polygon(50% 0,96% 20%,96% 80%,50% 100%,4% 80%,4% 20%)}
-  .hex-card>div{max-width:80%;display:grid;grid-template-columns:auto 1fr;align-items:center;column-gap:10px;row-gap:2px;transform:none}
-  .hex-card .hex-kicker{grid-column:1;grid-row:1 / span 2;font-size:13px;line-height:1.05;font-weight:800;text-align:left}
-  .hex-card strong{grid-column:2;grid-row:1;font-size:21px;line-height:1.02;text-align:left;margin:0}
-  .hex-card .hex-note{grid-column:2;grid-row:2;font-size:13px;line-height:1.15;text-align:left}
+  .hero-badges{grid-template-columns:1fr;max-width:274px;gap:10px;margin:114px auto 0}
+  .hex-card{transform:none;min-height:118px;filter:drop-shadow(0 8px 16px rgba(26,26,94,.12))}
+  .hex-card::before{clip-path:polygon(50% 0,95% 25%,95% 75%,50% 100%,5% 75%,5% 25%)}
+  .hex-card::after{inset:5px;border-width:2px;clip-path:polygon(50% 0,95% 25%,95% 75%,50% 100%,5% 75%,5% 25%)}
+  .hex-card>div{max-width:74%;display:block;transform:translateY(-1px)}
+  .hex-card span{font-size:14px;line-height:1.12}
+  .hex-card strong{font-size:20px;line-height:1.02;text-align:center;margin:1px 0}
   .hero-panel{padding-top:0}
   .phone{display:none}
   .hero-promise{margin-top:122px;font-size:24px;line-height:1.2;clip-path:none;border-radius:10px;padding:0}
@@ -447,9 +445,9 @@ button{font-family:inherit}
 <p class="hero-subtitle">不只是發簡訊，而是把白名單、短網址、追蹤數據與發送流程整合成一套真正能用的行銷工具。</p>
 </div>
 <div aria-label="lihiSMS 三大能力" class="hero-badges">
-<div class="hex-card"><div><span class="hex-kicker">內建</span><strong>防呆系統</strong><span class="hex-note">檢測關鍵字與網域</span></div></div>
-<div class="hex-card"><div><span class="hex-kicker">NCC 簡訊</span><strong>白名單</strong><span class="hex-note">協助提交送審</span></div></div>
-<div class="hex-card"><div><span class="hex-kicker">超強</span><strong>行銷系統</strong><span class="hex-note">追蹤效益與優化</span></div></div>
+<div class="hex-card"><div><span>內建</span><strong>防呆系統</strong><span>檢測發送</span><span>關鍵字跟網域</span></div></div>
+<div class="hex-card"><div><span>NCC 簡訊</span><strong>白名單</strong><span>協助提交送審</span><span>一條龍</span></div></div>
+<div class="hex-card"><div><span>超強</span><strong>行銷系統</strong><span>優化行銷</span><span>追蹤效益</span></div></div>
 </div>
 <div class="hero-promise">讓每一封簡訊都發得更有價值</div>
 </div>
