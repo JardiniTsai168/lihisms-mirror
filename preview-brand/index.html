@@ -71,8 +71,9 @@ button{font-family:inherit}
 .hex-card .hex-note{line-height:1.2}
 .hex-card span{font-size:20px;line-height:1.16;font-weight:500;letter-spacing:2px}
 .hex-card strong{font-size:30px;line-height:1.02;font-weight:900;margin:2px 0;letter-spacing:2px}
-.hero-promise{position:absolute;z-index:3;top:560px;left:50%;transform:translateX(-50%);width:min(720px,78%);min-height:auto;display:flex;align-items:center;justify-content:center;text-align:center;font-size:31px;font-weight:900;line-height:1.08;color:#21439b;background:#fff;padding:0 12px 12px;clip-path:polygon(0 0,100% 0,92% 100%,8% 100%)}
-.hero-promise::after{content:'';position:absolute;left:27%;right:27%;bottom:2px;height:4px;background:#f5d022;border-radius:999px}
+.hero-promise{position:absolute;z-index:3;top:560px;left:50%;transform:translateX(-50%);width:min(720px,78%);min-height:auto;display:flex;align-items:center;justify-content:center;text-align:center;font-size:31px;font-weight:900;line-height:1.08;color:#21439b;background:#fff;padding:0 12px;clip-path:polygon(0 0,100% 0,92% 100%,8% 100%)}
+.hero-promise span{position:relative;display:inline-block;padding-bottom:12px}
+.hero-promise span::after{content:'';position:absolute;left:18%;right:18%;bottom:0;height:4px;background:#f5d022;border-radius:999px}
 .phone{position:relative;z-index:2;width:270px;height:520px;margin:0 0 0 auto;border:10px solid #2f3038;border-radius:48px;background:linear-gradient(140deg,#8ce2d9,#397f82);box-shadow:var(--shadow);padding:52px 22px 28px;color:#fff}
 .phone::before{content:'';position:absolute;top:0;left:50%;width:110px;height:28px;transform:translateX(-50%);background:#2f3038;border-radius:0 0 18px 18px}
 .phone-time{text-align:center;font:500 58px/1 'Inter',sans-serif;margin:30px 0 26px}
@@ -315,8 +316,8 @@ button{font-family:inherit}
   .hex-card strong{font-size:20px;line-height:1.02;text-align:center;margin:1px 0}
   .hero-panel{padding-top:0}
   .phone{display:none}
-  .hero-promise{margin-top:25px;font-size:24px;line-height:1.2;clip-path:none;border-radius:10px;padding:0}
-  .hero-promise::after{bottom:-6px}
+  .hero-promise{margin-top:25px;min-height:92px;font-size:24px;line-height:1.2;clip-path:none;border-radius:10px;padding:0 16px}
+  .hero-promise span{padding-bottom:14px}
   .whitelist{margin-top:18px;padding-top:54px;padding-bottom:24px}
   .whitelist h2{font-size:30px}
   .whitelist-note > span:last-child{max-width:300px;font-size:18px;line-height:1.5}
@@ -450,7 +451,7 @@ button{font-family:inherit}
 <div class="hex-card"><div><span>NCC 簡訊</span><strong>白名單</strong><span>協助提交送審</span><span>一條龍</span></div></div>
 <div class="hex-card"><div><span>超強</span><strong>行銷系統</strong><span>優化行銷</span><span>追蹤效益</span></div></div>
 </div>
-<div class="hero-promise">讓每一封簡訊都發得更有價值</div>
+<div class="hero-promise"><span>讓每一封簡訊都發得更有價值</span></div>
 </div>
 </div>
 <div aria-label="NCC 簡訊通知示意" class="phone">
