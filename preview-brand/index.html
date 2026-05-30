@@ -351,11 +351,13 @@ button{font-family:inherit}
   .feature-icon .icon{width:22px;height:22px}
   .feature-item-ab{display:grid}
   .ab-note{display:none}
-  .price-card,.price-card:nth-child(2){min-height:194px;padding:94px 16px 24px}
-  .price-bubble{width:92px;height:92px;top:14px;font-size:25px;border-radius:24px}
-  .price-bubble span{font-size:15px;margin-top:4px}
-  .price-card h3{font-size:27px}
-  .price-card p{margin-top:10px;font-size:14px;padding:5px 10px}
+  .plan-grid{gap:8px}
+  .price-card,.price-card:nth-child(2){min-height:136px;padding:62px 8px 14px;border-radius:16px 16px 0 0;clip-path:polygon(0 0,100% 0,100% 92%,50% 100%,0 92%)}
+  .price-card:nth-child(2){transform:none;box-shadow:0 16px 26px rgba(26,26,94,.12)}
+  .price-bubble{width:58px;height:58px;top:10px;font-size:15px;border-radius:18px;border-width:4px;letter-spacing:-.5px}
+  .price-bubble span{font-size:10px;margin-top:2px}
+  .price-card h3{font-size:16px;line-height:1.05;letter-spacing:-.03em}
+  .price-card p{display:block;margin-top:6px;padding:0;background:transparent;color:inherit;border-radius:0;font-size:10px;line-height:1.2;font-weight:800;white-space:normal}
   .promo{padding:0 18px}
   .promo-note{font-size:15px;line-height:1.5}
   .promo-top h2{font-size:36px}
