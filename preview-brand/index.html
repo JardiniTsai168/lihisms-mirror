@@ -123,6 +123,7 @@ button{font-family:inherit}
 .feature-item{display:grid;grid-template-columns:70px 1fr;gap:18px;align-items:center;color:#1A1A5E;font-size:25px;font-weight:900}
 .feature-icon{width:62px;height:62px;border:4px solid #1A1A5E;border-radius:18px;display:flex;align-items:center;justify-content:center;color:#1A1A5E;background:#fff1f6}
 .feature-icon .icon{width:34px;height:34px;stroke-width:2.3px}
+.feature-item-ab{display:none}
 .ab-note{margin-top:28px;text-align:center;color:#2A2A68;font-size:27px;line-height:1.35}
 .ab-note strong{font-size:34px}
 .plans{padding:0 84px 28px;background:linear-gradient(180deg,#fffefe 0%,#fff7fa 100%);overflow:visible}
@@ -346,11 +347,10 @@ button{font-family:inherit}
   .screen-hole span{font-size:15px}
   .feature-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 12px;max-width:100%;margin-top:0}
   .feature-item{grid-template-columns:42px 1fr;gap:10px;padding:10px 12px;border-radius:18px;background:rgba(255,255,255,.74);box-shadow:0 10px 22px rgba(26,26,94,.06);font-size:16px;line-height:1.15}
-  .feature-item:nth-child(5){grid-column:1 / -1;justify-self:center;width:min(100%,172px)}
   .feature-icon{width:42px;height:42px;border-width:3px;border-radius:13px}
   .feature-icon .icon{width:22px;height:22px}
-  .ab-note{margin-top:18px;font-size:18px;line-height:1.28}
-  .ab-note strong{font-size:24px}
+  .feature-item-ab{display:grid}
+  .ab-note{display:none}
   .price-bubble{width:124px;height:124px;top:18px;font-size:30px}
   .price-bubble span{font-size:20px;margin-top:6px}
   .price-card h3{font-size:30px}
@@ -508,6 +508,7 @@ button{font-family:inherit}
 <div class="feature-item"><div class="feature-icon"><svg aria-hidden="true" class="icon"><use href="#icon-chart"></use></svg></div><div>埋追蹤碼</div></div>
 <div class="feature-item"><div class="feature-icon"><svg aria-hidden="true" class="icon"><use href="#icon-sliders"></use></svg></div><div>自訂參數</div></div>
 <div class="feature-item"><div class="feature-icon"><svg aria-hidden="true" class="icon"><use href="#icon-refresh"></use></svg></div><div>連結替換</div></div>
+<div class="feature-item feature-item-ab"><div class="feature-icon"><svg aria-hidden="true" class="icon"><use href="#icon-badge-check"></use></svg></div><div>AB 測試</div></div>
 </div>
 <p class="ab-note">還可 <strong>AB 測試</strong><br/>協助優化跟追蹤你的行銷數據</p>
 </div>
