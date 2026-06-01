@@ -137,13 +137,13 @@ button{font-family:inherit}
 .promo-body{background:linear-gradient(105deg,var(--blue),var(--navy) 48%,#c75bab);color:#fff;padding:68px 108px 36px;clip-path:polygon(0 0,51% 8%,100% 0,100% 92%,51% 100%,0 92%)}
 .promo-pill{display:inline-block;background:linear-gradient(90deg,#654de5,#b83dc2);padding:11px 42px;border-radius:12px;font-size:30px;font-weight:500;margin-bottom:4px}
 .promo-code{font-size:28px;margin-bottom:22px}
-.promo-code strong{font:900 36px/1 'Inter',sans-serif;color:#ffe066;text-shadow:0 2px 12px rgba(255,224,102,.35)}
+.promo-code strong{font:900 36px/1 'Inter',sans-serif}
 .gift-list{max-width:640px;margin:32px auto 28px;display:grid;gap:15px;text-align:left}
 .gift-item{position:relative;background:linear-gradient(90deg,var(--pink),#f01b9b);border-radius:16px;color:#fff;padding:12px 28px 14px 92px;font-size:30px;font-weight:900;box-shadow:0 10px 22px rgba(0,0,0,.2)}
 .gift-item .num{position:absolute;left:-26px;top:50%;transform:translateY(-50%);width:72px;height:72px;border-radius:50%;background:#fff;color:#3329a0;display:flex;align-items:center;justify-content:center;font:900 56px/1 'Inter',sans-serif;box-shadow:0 10px 18px rgba(0,0,0,.22)}
 .gift-item small{font-size:21px;font-weight:500;margin-left:4px}
 .promo-foot{font-size:29px;line-height:1.6;color:#fff}
-.promo-foot strong{font-size:36px;color:inherit;text-shadow:none}
+.promo-foot strong{font-size:36px}
 .promo-foot .promo-price{color:#ff9cd0;text-shadow:0 2px 12px rgba(255,156,208,.35)}
 .cta-section{text-align:center;padding:24px 72px 30px;background:#fff}
 .cta-button{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;min-width:520px;min-height:150px;background:var(--pink);color:#fff;border-radius:16px;box-shadow:10px 10px 0 var(--navy);transition:transform .2s ease,box-shadow .2s ease}
@@ -210,6 +210,10 @@ button{font-family:inherit}
 }
 
 .mobile-cta a{display:flex;justify-content:center;align-items:center;background:var(--pink);color:#fff;border-radius:10px;padding:13px;font-size:17px;font-weight:900}
+@media(min-width:901px){
+  .promo-code strong{color:#ffe066;text-shadow:0 2px 12px rgba(255,224,102,.35)}
+  .promo-foot strong{color:inherit;text-shadow:none}
+}
 @media(max-width:900px){
   .page{max-width:100%;box-shadow:none}
   .section{padding:44px 24px}
@@ -486,7 +490,7 @@ button{font-family:inherit}
 <div class="price-card">
 <div class="price-bubble">$0.79<span>/封</span></div>
 <h3>大量發送</h3>
-<p>需一次購買超過2萬封</p>
+<p>需一次超過 20,000 封</p>
 </div>
 <div class="price-card">
 <div class="price-bubble">$0.85<span>/封</span></div>
