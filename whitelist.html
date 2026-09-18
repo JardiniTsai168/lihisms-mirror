@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#fff5f8">
+  <title>提交白名單網域｜lihiSMS</title>
+  <link rel="icon" href="assets/images/favicon-32x32.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800;900&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="onboarding.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要內容</a>
+  <header class="flow-header">
+    <div class="flow-header__inner">
+      <a class="flow-logo" href="./" aria-label="回到 lihiSMS 首頁"><img src="assets/images/lihisms-logo.png" alt="lihiSMS"></a>
+      <a class="header-help" href="https://lihistatus.com/contact">需要協助？聯絡我們</a>
+    </div>
+  </header>
+
+  <main class="flow-main" id="main">
+    <nav class="progress" aria-label="申請進度">
+      <ol class="progress__list">
+        <li class="progress__item is-complete"><span class="progress__dot">✓</span><span class="progress__label">建立帳號</span></li>
+        <li class="progress__item is-complete"><span class="progress__dot">✓</span><span class="progress__label">實名驗證</span></li>
+        <li class="progress__item is-current" aria-current="step"><span class="progress__dot">3</span><span class="progress__label">白名單網域</span></li>
+        <li class="progress__item"><span class="progress__dot">4</span><span class="progress__label">完成申請</span></li>
+      </ol>
+    </nav>
+
+    <div class="flow-layout">
+      <div class="flow-copy">
+        <div class="eyebrow">STEP 03</div>
+        <h1>提交白名單網域</h1>
+        <p class="lead">告訴我們簡訊會使用哪些網域與品牌名稱，審核通過後就能安心發送。</p>
+      </div>
+
+      <div class="form-shell">
+        <div class="form-shell__inner">
+          <form data-flow-form data-next="success.html" data-loading="正在送出申請…">
+            <section class="form-section" aria-labelledby="domain-title">
+              <div class="section-heading">
+                <span class="section-number">1</span>
+                <div><h2 id="domain-title">你有自己的網域嗎？</h2><p>請選擇最符合目前狀況的方式。</p></div>
+              </div>
+              <div class="choice-grid">
+                <div class="choice">
+                  <input id="domain-own" name="domain_choice" type="radio" value="own" checked>
+                  <label for="domain-own">
+                    <span class="choice__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></span>
+                    <span><strong>我有自己的網域</strong>填寫預計用於簡訊發送的網域。</span>
+                  </label>
+                </div>
+                <div class="choice">
+                  <input id="domain-buy-choice" name="domain_choice" type="radio" value="buy">
+                  <label for="domain-buy-choice">
+                    <span class="choice__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg></span>
+                    <span><strong>我需要購買網域</strong>到 lihi 選購品牌網域，完成後回來填寫。<b> .link 網域優惠 $99</b></span>
+                  </label>
+                </div>
+              </div>
+              <div class="domain-buy" id="domain-buy" hidden>
+                先到 <a href="https://lihidomain.com/link-domain-entrepreneur/" target="_blank" rel="noopener">lihi 購買網域</a>，結帳輸入優惠碼 <strong>LIHISMS99</strong>。購買完成後回到本頁繼續申請。
+              </div>
+            </section>
+
+            <section class="form-section" aria-labelledby="send-info-title">
+              <div class="section-heading">
+                <span class="section-number">2</span>
+                <div><h2 id="send-info-title">發送資訊</h2><p>這些資料將用於電信簡訊白名單審核。</p></div>
+              </div>
+              <div class="form-grid form-grid--2">
+                <div class="field field--full">
+                  <label for="sms-domain">發送簡訊用的網域</label>
+                  <input id="sms-domain" name="sms_domain" type="text" inputmode="url" placeholder="例如：go.yourbrand.com" pattern="([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}" data-pattern-message="請輸入網域，不需要加 https:// 或路徑。" required aria-describedby="sms-domain-hint sms-domain-error">
+                  <span class="field__hint" id="sms-domain-hint">只需填寫網域，不需要加 https://</span>
+                  <p class="field__error" id="sms-domain-error" aria-live="polite"></p>
+                </div>
+                <div class="field field--full">
+                  <label for="brand-names">品牌名稱</label>
+                  <textarea id="brand-names" name="brand_names" placeholder="例如：lihi, lihi 短網址, lihi 行銷工具" required aria-describedby="brand-names-hint brand-names-error"></textarea>
+                  <span class="field__hint" id="brand-names-hint">可輸入多個品牌名稱，請用半形逗號「,」區隔。</span>
+                  <p class="field__error" id="brand-names-error" aria-live="polite"></p>
+                </div>
+              </div>
+            </section>
+
+            <section class="form-section" aria-labelledby="company-title">
+              <div class="section-heading">
+                <span class="section-number">3</span>
+                <div><h2 id="company-title">公司資料</h2><p>請依營業登記資料填寫，以利核對。</p></div>
+              </div>
+              <div class="form-grid form-grid--2">
+                <div class="field">
+                  <label for="tax-id">公司統編</label>
+                  <input id="tax-id" name="tax_id" type="text" inputmode="numeric" maxlength="8" pattern="[0-9]{8}" data-pattern-message="公司統編需為 8 位數字。" placeholder="12345678" required aria-describedby="tax-id-hint tax-id-error">
+                  <span class="field__hint" id="tax-id-hint">未來可由統編自動帶入公司資料</span>
+                  <p class="field__error" id="tax-id-error" aria-live="polite"></p>
+                </div>
+                <div class="field">
+                  <label for="company-name">公司抬頭</label>
+                  <input id="company-name" name="company_name" type="text" autocomplete="organization" required aria-describedby="company-name-error">
+                  <p class="field__error" id="company-name-error" aria-live="polite"></p>
+                </div>
+                <div class="field field--full">
+                  <label for="company-address">公司地址</label>
+                  <input id="company-address" name="company_address" type="text" autocomplete="address-line1" required aria-describedby="company-address-error">
+                  <p class="field__error" id="company-address-error" aria-live="polite"></p>
+                </div>
+                <div class="field">
+                  <label for="business-item">營業項目</label>
+                  <input id="business-item" name="business_item" type="text" required aria-describedby="business-item-error">
+                  <p class="field__error" id="business-item-error" aria-live="polite"></p>
+                </div>
+                <div class="field">
+                  <label for="owner-name">負責人姓名</label>
+                  <input id="owner-name" name="owner_name" type="text" autocomplete="name" required aria-describedby="owner-name-error">
+                  <p class="field__error" id="owner-name-error" aria-live="polite"></p>
+                </div>
+                <div class="field field--full">
+                  <span class="field-label" id="registration-label">上傳營登 PDF</span>
+                  <div class="upload-field">
+                    <input id="registration-pdf" name="registration_pdf" type="file" accept="application/pdf" required aria-labelledby="registration-label" aria-describedby="registration-pdf-error">
+                    <label class="upload-box" for="registration-pdf">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M8 15h8M8 11h2M8 19h5"/></svg>
+                      <strong>選擇營業登記 PDF</strong><span data-filename data-default="PDF 檔案上限 10MB">PDF 檔案上限 10MB</span>
+                    </label>
+                    <p class="field__error" id="registration-pdf-error" aria-live="polite"></p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <div class="check-row">
+              <input id="truthful" name="truthful" type="checkbox" required aria-describedby="truthful-error">
+              <label for="truthful">我確認以上資料正確，並同意 lihi 將資料用於簡訊會員與白名單審核。</label>
+              <p class="field__error" id="truthful-error" aria-live="polite"></p>
+            </div>
+            <div class="form-actions">
+              <a class="button button--secondary" href="kyc.html">上一步</a>
+              <button class="button button--primary" type="submit">完成申請
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="flow-footer">© 2018–2026 利害短網址有限公司 <a href="privacy-policy.html">隱私權政策</a></footer>
+  <script src="onboarding.js" defer></script>
+</body>
+</html>

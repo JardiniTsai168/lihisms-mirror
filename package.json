@@ -1,0 +1,10 @@
+{
+  "name": "lihisms-site",
+  "private": true,
+  "scripts": {
+    "test": "playwright test flow.spec.js --browser=chromium"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0"
+  }
+}

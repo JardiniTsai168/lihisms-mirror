@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#fff5f8">
+  <title>實名驗證｜lihiSMS</title>
+  <link rel="icon" href="assets/images/favicon-32x32.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800;900&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="onboarding.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要內容</a>
+  <header class="flow-header">
+    <div class="flow-header__inner">
+      <a class="flow-logo" href="./" aria-label="回到 lihiSMS 首頁"><img src="assets/images/lihisms-logo.png" alt="lihiSMS"></a>
+      <a class="header-help" href="https://lihistatus.com/contact">需要協助？聯絡我們</a>
+    </div>
+  </header>
+
+  <main class="flow-main" id="main">
+    <nav class="progress" aria-label="申請進度">
+      <ol class="progress__list">
+        <li class="progress__item is-complete"><span class="progress__dot">✓</span><span class="progress__label">建立帳號</span></li>
+        <li class="progress__item is-current" aria-current="step"><span class="progress__dot">2</span><span class="progress__label">實名驗證</span></li>
+        <li class="progress__item"><span class="progress__dot">3</span><span class="progress__label">白名單網域</span></li>
+        <li class="progress__item"><span class="progress__dot">4</span><span class="progress__label">完成申請</span></li>
+      </ol>
+    </nav>
+
+    <div class="flow-layout">
+      <div class="flow-copy">
+        <div class="eyebrow">STEP 02</div>
+        <h1>完成實名驗證</h1>
+        <p class="lead">為配合《電信管理法》與 NCC 簡訊規範，lihi 必須對發送簡訊會員進行用戶審核。</p>
+      </div>
+
+      <div class="flow-layout has-aside">
+        <div class="form-shell">
+          <div class="form-shell__inner">
+            <div class="notice">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="M9 12l2 2 4-4"/></svg>
+              <p>當簡訊內容包含 <strong>網址、品牌名稱或電話號碼</strong> 時，依規定發送方需進行實名驗證。</p>
+            </div>
+
+            <form data-flow-form data-next="whitelist.html" data-loading="正在確認資料…">
+              <section class="form-section" aria-labelledby="kyc-title">
+                <div class="section-heading">
+                  <span class="section-number">1</span>
+                  <div><h2 id="kyc-title">聯絡資料</h2><p>請填寫與證件相同的真實姓名。</p></div>
+                </div>
+                <div class="form-grid form-grid--2">
+                  <div class="field">
+                    <label for="real-name">真實姓名</label>
+                    <input id="real-name" name="real_name" type="text" autocomplete="name" minlength="2" required aria-describedby="real-name-error">
+                    <p class="field__error" id="real-name-error" aria-live="polite"></p>
+                  </div>
+                  <div class="field">
+                    <label for="phone">聯絡電話</label>
+                    <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="0912-345-678" pattern="[0-9+() -]{8,20}" data-pattern-message="請輸入可聯絡的電話號碼。" required aria-describedby="phone-error">
+                    <p class="field__error" id="phone-error" aria-live="polite"></p>
+                  </div>
+                </div>
+              </section>
+
+              <section class="form-section" aria-labelledby="id-title">
+                <div class="section-heading">
+                  <span class="section-number">2</span>
+                  <div><h2 id="id-title">上傳雙證件正反面</h2><p>支援 JPG、PNG，每個檔案上限 10MB。</p></div>
+                </div>
+                <div class="upload-grid">
+                  <div class="upload-field">
+                    <input id="id-front" name="id_front" type="file" accept="image/jpeg,image/png" required aria-describedby="id-front-error">
+                    <label class="upload-box" for="id-front">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m0-12 4 4m-4-4L8 7"/><path d="M4 14v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/></svg>
+                      <strong>身分證正面</strong><span data-filename data-default="選擇照片或拍照上傳">選擇照片或拍照上傳</span>
+                    </label>
+                    <p class="field__error" id="id-front-error" aria-live="polite"></p>
+                  </div>
+                  <div class="upload-field">
+                    <input id="id-back" name="id_back" type="file" accept="image/jpeg,image/png" required aria-describedby="id-back-error">
+                    <label class="upload-box" for="id-back">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m0-12 4 4m-4-4L8 7"/><path d="M4 14v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/></svg>
+                      <strong>身分證反面</strong><span data-filename data-default="選擇照片或拍照上傳">選擇照片或拍照上傳</span>
+                    </label>
+                    <p class="field__error" id="id-back-error" aria-live="polite"></p>
+                  </div>
+                  <div class="upload-field">
+                    <input id="second-front" name="second_front" type="file" accept="image/jpeg,image/png" required aria-describedby="second-front-error">
+                    <label class="upload-box" for="second-front">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m0-12 4 4m-4-4L8 7"/><path d="M4 14v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/></svg>
+                      <strong>第二證件正面</strong><span data-filename data-default="健保卡或駕照">健保卡或駕照</span>
+                    </label>
+                    <p class="field__error" id="second-front-error" aria-live="polite"></p>
+                  </div>
+                  <div class="upload-field">
+                    <input id="second-back" name="second_back" type="file" accept="image/jpeg,image/png" required aria-describedby="second-back-error">
+                    <label class="upload-box" for="second-back">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m0-12 4 4m-4-4L8 7"/><path d="M4 14v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/></svg>
+                      <strong>第二證件反面</strong><span data-filename data-default="健保卡或駕照">健保卡或駕照</span>
+                    </label>
+                    <p class="field__error" id="second-back-error" aria-live="polite"></p>
+                  </div>
+                </div>
+              </section>
+
+              <div class="form-actions">
+                <a class="button button--secondary" href="register.html">上一步</a>
+                <button class="button button--primary" type="submit">下一步，提交白名單網域
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <aside class="aside" aria-labelledby="privacy-title">
+          <h2 id="privacy-title">你的資料會被妥善保護</h2>
+          <ul class="aside-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="M9 12l2 2 4-4"/></svg><span>資料僅用於會員實名審核與法規遵循。</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>證件資料不會用於行銷或提供給無關第三方。</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="m8 12 3 3 5-6"/></svg><span>清晰、完整的照片能加快人工審核。</span></li>
+          </ul>
+          <p class="privacy-note">送出前請確認證件四角完整、文字清晰，且無反光遮蔽。</p>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="flow-footer">© 2018–2026 利害短網址有限公司 <a href="privacy-policy.html">隱私權政策</a></footer>
+  <script src="onboarding.js" defer></script>
+</body>
+</html>
