@@ -18,19 +18,23 @@ test('landing CTAs start the local onboarding flow', async ({ page }) => {
 
 test('email registration validates and advances', async ({ page }) => {
   await page.goto(`${base}/register.html`);
-  await page.getByRole('button', { name: '建立帳號並繼續' }).click();
+  await expect(page.locator('.eyebrow')).toHaveCount(0);
+  await page.getByRole('button', { name: '下一步', exact: true }).click();
   await expect(page.locator('#name-error')).not.toBeEmpty();
   await page.locator('#name').fill('測試使用者');
   await page.locator('#email').fill('tester@example.com');
   await page.locator('#password').fill('password123');
   await page.locator('#password-confirmation').fill('password123');
   await page.locator('#terms').check();
-  await page.getByRole('button', { name: '建立帳號並繼續' }).click();
+  await page.getByRole('button', { name: '下一步', exact: true }).click();
   await expect(page).toHaveURL(/kyc\.html$/);
 });
 
 test('KYC upload flow advances', async ({ page }) => {
   await page.goto(`${base}/kyc.html`);
+  await expect(page.locator('.eyebrow')).toHaveCount(0);
+  await expect(page.locator('.aside')).toHaveCount(0);
+  await expect(page.locator('.flow-layout > .form-shell')).toBeVisible();
   await page.locator('#real-name').fill('測試使用者');
   await page.locator('#phone').fill('0912345678');
   const image = { name: 'id.png', mimeType: 'image/png', buffer: Buffer.from('test') };
@@ -41,8 +45,11 @@ test('KYC upload flow advances', async ({ page }) => {
 
 test('domain choice and application flow complete', async ({ page }) => {
   await page.goto(`${base}/whitelist.html`);
+  await expect(page.locator('.eyebrow')).toHaveCount(0);
+  await expect(page.getByText('NCC 規範－發送簡訊，需要有自己的品牌網域')).toBeVisible();
   await page.locator('label[for="domain-buy-choice"]').click();
   await expect(page.locator('#domain-buy')).toBeVisible();
+  await expect(page.locator('#domain-buy')).toContainText('總價值超過 $2,500');
   await page.locator('#sms-domain').fill('go.example.com');
   await page.locator('#brand-names').fill('Example, Example 品牌');
   await page.locator('#tax-id').fill('12345678');
