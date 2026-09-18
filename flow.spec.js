@@ -7,6 +7,13 @@ test('landing CTAs start the local onboarding flow', async ({ page }) => {
   const starts = page.locator('a[href="register.html"]');
   expect(await starts.count()).toBeGreaterThanOrEqual(4);
   await expect(starts.first()).toContainText('馬上開始');
+  await expect(page.getByText('註冊即送 200 點 簡訊點數')).toBeVisible();
+  await expect(page.locator('.promo')).toHaveCount(0);
+  const sectionOrder = await page.locator('.related-section, .faq-section').evaluateAll((sections) => sections.map((section) => section.className));
+  expect(sectionOrder).toEqual(['related-section', 'faq-section']);
+  expect((await page.locator('.faq-answer').first().textContent()).length).toBeGreaterThan(40);
+  await page.locator('.faq-item').first().locator('summary').click();
+  await expect(page.locator('.faq-answer').first()).toBeVisible();
 });
 
 test('email registration validates and advances', async ({ page }) => {
@@ -53,7 +60,7 @@ test('domain choice and application flow complete', async ({ page }) => {
 for (const width of [320, 768, 1440]) {
   test(`all flow pages fit ${width}px without horizontal overflow`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
-    for (const path of ['register.html', 'kyc.html', 'whitelist.html', 'success.html']) {
+    for (const path of ['index.html', 'register.html', 'kyc.html', 'whitelist.html', 'success.html']) {
       await page.goto(`${base}/${path}`);
       const hasOverflow = await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth);
       expect(hasOverflow, `${path} overflows at ${width}px`).toBe(false);
