@@ -151,14 +151,11 @@ button{font-family:inherit}
 .cta-panel{position:relative;isolation:isolate;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:48px;max-width:1040px;margin:0 auto;padding:34px 40px 34px 44px;overflow:hidden;border:1px solid rgba(255,255,255,.12);border-radius:28px;background:linear-gradient(125deg,#151755 0%,#202477 68%,#2b2f84 100%);box-shadow:0 18px 38px rgba(26,26,94,.13)}
 .cta-panel::after{content:'';position:absolute;z-index:-1;right:-96px;top:-120px;width:330px;height:330px;border:1px solid rgba(255,107,157,.2);border-radius:50%;box-shadow:0 0 0 44px rgba(255,107,157,.06),0 0 0 88px rgba(255,255,255,.025)}
 .cta-copy{text-align:left}
-.cta-kicker{display:inline-flex;align-items:center;gap:9px;margin:0 0 12px;padding:7px 12px 7px 9px;border:1px solid rgba(255,255,255,.14);border-radius:999px;background:rgba(255,255,255,.08);color:#fff;font-size:15px;line-height:1.2;font-weight:700}
-.cta-kicker::before{content:'註冊禮';padding:4px 8px;border-radius:999px;background:#FF6B9D;color:#1A1A5E;font-size:12px;font-weight:900;letter-spacing:.04em}
-.cta-kicker strong{color:#ff8db3;font-size:1.08em}
 .cta-copy h2{margin:0;max-width:630px;color:#fff;font-size:clamp(19px,2.25vw,26px);line-height:1.48;font-weight:700;letter-spacing:.015em}
 .cta-copy h2 span{color:#ffb0ca}
 .cta-button{position:relative;z-index:1;display:inline-flex;align-items:center;justify-content:center;gap:18px;min-width:248px;min-height:72px;padding:18px 24px 19px 30px;background:var(--pink);color:#1A1A5E;border:2px solid rgba(255,255,255,.28);border-radius:18px;box-shadow:0 10px 24px rgba(8,9,51,.28);transition:transform .2s ease,box-shadow .2s ease,background-color .2s ease}
 .cta-button:hover{transform:translateY(-3px);background:#ff7cab;box-shadow:0 15px 30px rgba(8,9,51,.35)}
-.cta-button span{font-size:25px;font-weight:900;line-height:1.05;color:#1A1A5E}
+.cta-button span{font-size:25px;font-weight:900;line-height:1.05;color:#fff}
 .cta-button::after{content:'→';display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#1A1A5E;color:#fff;font:800 20px/1 'Inter',sans-serif;transition:transform .2s ease}
 .cta-button:hover::after{transform:translateX(3px)}
 .cta-sms-word{margin-top:0;font:900 34px/1 'Inter','Noto Sans TC',sans-serif;font-style:italic;letter-spacing:-1px;color:#fff}
@@ -385,7 +382,6 @@ body.menu-open{overflow:hidden}
   .cta-section{padding:18px 18px 28px}
   .cta-panel{gap:22px;padding:24px 20px 20px;border-radius:22px}
   .cta-panel::after{right:-150px;top:-120px}
-  .cta-kicker{margin-bottom:10px;font-size:14px}
   .cta-copy h2{font-size:18px;line-height:1.55}
   .cta-button{gap:14px;width:100%;min-height:62px;padding:14px 20px;margin:0 auto;border-radius:15px}
   .cta-button span{font-size:22px}
@@ -436,7 +432,7 @@ body.menu-open{overflow:hidden}
     {
       "@type":"Question",
       "name":"lihiSMS 有 API 嗎？",
-      "acceptedAnswer":{"@type":"Answer","text":"有。lihiSMS 提供簡訊發送 API，可串接網站、會員系統或內部工具，自動發送通知、活動與驗證類簡訊。若需要申請串接或確認技術規格，請聯絡 lihi 客服。"}
+      "acceptedAnswer":{"@type":"Answer","text":"有。lihiSMS 提供簡訊發送 API，可串接網站、會員系統或內部工具，自動發送通知、活動與驗證類簡訊。註冊後可至 lihi 後台取得 API 與串接文件；如有任何問題，請聯絡 lihi 客服。"}
     },
     {
       "@type":"Question",
@@ -616,8 +612,7 @@ body.menu-open{overflow:hidden}
 <section class="cta-section">
 <div class="cta-panel">
 <div class="cta-copy">
-<p class="cta-kicker">註冊即送 <strong>200 點</strong> 簡訊點數</p>
-<h2>從實名驗證到電信白名單送審，<br/><span>lihi 帶你一步完成。</span></h2>
+<h2>從實名驗證到電信白名單送審，<br/><span>lihi 帶你一次完成。</span></h2>
 </div>
 <a class="cta-button" href="register.html">
 <span>馬上開始</span>
@@ -644,7 +639,7 @@ body.menu-open{overflow:hidden}
 <div class="faq-list">
 <details class="faq-item">
 <summary>lihiSMS 有 API 嗎？</summary>
-<div class="faq-answer">有。lihiSMS 提供簡訊發送 API，可串接網站、會員系統或內部工具，自動發送通知、活動與驗證類簡訊。若需要申請串接或確認技術規格，請<a href="https://lihistatus.com/contact" rel="noopener" target="_blank">聯絡 lihi 客服</a>。</div>
+<div class="faq-answer">有。lihiSMS 提供簡訊發送 API，可串接網站、會員系統或內部工具，自動發送通知、活動與驗證類簡訊。註冊後可至 lihi 後台取得 API 與串接文件；如有任何問題，請<a href="https://lihistatus.com/contact" rel="noopener" target="_blank">聯絡 lihi 客服</a>。</div>
 </details>
 <details class="faq-item">
 <summary>lihiSMS 可以串 OTP 嗎？</summary>

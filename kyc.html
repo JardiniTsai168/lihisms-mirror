@@ -34,16 +34,11 @@
     <div class="flow-layout">
       <div class="flow-copy">
         <h1>完成實名驗證</h1>
-        <p class="lead lead--single-line">為配合《電信管理法》與 NCC 簡訊規範，lihi 必須對發送簡訊會員進行用戶審核。</p>
+        <p class="lead lead--single-line">為配合 NCC《電信管理法》，當簡訊內容包含網址、品牌名稱或電話號碼時，lihi 須依法對發送會員進行實名驗證。</p>
       </div>
 
       <div class="form-shell">
           <div class="form-shell__inner">
-            <div class="notice">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="M9 12l2 2 4-4"/></svg>
-              <p>當簡訊內容包含 <strong>網址、品牌名稱或電話號碼</strong> 時，依規定發送方需進行實名驗證。</p>
-            </div>
-
             <form data-flow-form data-next="whitelist.html" data-loading="正在確認資料…">
               <section class="form-section" aria-labelledby="kyc-title">
                 <div class="section-heading">
@@ -117,7 +112,31 @@
     </div>
   </main>
 
-  <footer class="flow-footer">© 2018–2026 利害短網址有限公司 <a href="privacy-policy.html">隱私權政策</a></footer>
+  <footer class="site-footer">
+    <div class="footer-shell">
+      <div class="footer-left">
+        <img loading="lazy" decoding="async" alt="lihiSMS" src="assets/images/lihisms-logo.png">
+        <div class="footer-meta">
+          <div>利害短網址有限公司 | 2017 年成立，服務超過 5,000+ 品牌</div>
+          <div>© 2018-2026 統編 82908327</div>
+        </div>
+      </div>
+      <div class="footer-right">
+        <ul class="footer-inline-links">
+          <li><a href="terms-of-use.html">服務條款</a></li>
+          <li><a href="privacy-policy.html">隱私權政策</a></li>
+          <li><a href="https://knowledge.lihi.io/service-level-agreement/" target="_blank" rel="noopener">服務等級</a></li>
+          <li><a href="https://report.lihi.io" target="_blank" rel="noopener">檢舉網址</a></li>
+          <li><a href="mailto:service@lihi.io">service@lihi.io</a></li>
+        </ul>
+        <div class="footer-social">
+          <a aria-label="Facebook" href="https://www.facebook.com/lihi.io" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12Z"/></svg></a>
+          <a aria-label="Instagram" href="https://www.instagram.com/lihi.io.tw" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5Zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5Zm6-3.25a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 18 6.25Z"/></svg></a>
+          <a aria-label="YouTube" href="https://www.youtube.com/@lihi_io" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 12s0-3.55-.45-5.26a2.9 2.9 0 0 0-2.04-2.04C18.8 4.25 12 4.25 12 4.25s-6.8 0-8.51.45A2.9 2.9 0 0 0 1.45 6.74C1 8.45 1 12 1 12s0 3.55.45 5.26a2.9 2.9 0 0 0 2.04 2.04c1.71.45 8.51.45 8.51.45s6.8 0 8.51-.45a2.9 2.9 0 0 0 2.04-2.04C23 15.55 23 12 23 12Zm-13.75 3.76V8.24L15.5 12l-6.25 3.76Z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
   <script src="onboarding.js" defer></script>
 </body>
 </html>
