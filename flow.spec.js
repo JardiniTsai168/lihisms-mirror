@@ -53,8 +53,9 @@ test('domain choice and application flow complete', async ({ page }) => {
   await expect(page.getByText('NCC 規範－發送簡訊，需要有自己的品牌網域')).toBeVisible();
   await page.locator('label[for="domain-buy-choice"]').click();
   await expect(page.locator('#domain-buy')).toBeVisible();
-  await expect(page.locator('#domain-buy')).toContainText('總價值超過 $2,500');
-  await expect(page.locator('#domain-buy')).toContainText('lihiSMS99');
+  await expect(page.locator('#domain-buy')).toContainText('購買網域再送 2 個月 lihi 行銷系統服務');
+  await expect(page.locator('#domain-buy')).not.toContainText('lihiSMS99');
+  await expect(page.locator('#domain-buy')).not.toContainText('$2,500');
   await page.locator('#sms-domain').fill('go.example.com, sms.example.com');
   await page.locator('#brand-names').fill('Example, Example 品牌');
   await page.locator('#tax-id').fill('12345678');
